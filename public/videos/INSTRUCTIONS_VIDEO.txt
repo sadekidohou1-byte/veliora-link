@@ -1,0 +1,15 @@
+=======================================================
+VELIORA LINKS - HERO VIDEO BACKGROUND
+=======================================================
+
+Pour afficher votre vidéo dans la section Hero (en haut du site) :
+
+1. Déposez votre fichier vidéo dans ce dossier :
+   public/videos/
+
+2. Nommez votre fichier vidéo :
+   hero-background.mp4
+   (ou hero.mp4)
+
+Le site la lira automatiquement en boucle (loop), muet (muted) et fluide avec effet cinématique maritime !
+Si aucune vidéo n'est présente, la photo officielle de haute qualité s'affiche automatiquement en arrière-plan.
