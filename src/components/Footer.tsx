@@ -76,21 +76,33 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onRequestQuote }) =>
             <p className="text-slate-300 text-xs leading-relaxed max-w-sm">
               Veliora Links facilitates the movement of commodities from source to market through structured trading, procurement and supply solutions. Built on integrity, transparency, and consistent execution.
             </p>
-            <div className="pt-2 text-xs space-y-2 text-slate-300">
-              <div className="flex items-center gap-2">
-                <Phone className="w-3.5 h-3.5 text-amber-400" />
-                <span className="font-mono text-white font-semibold">NG: {COMPANY_INFO.phone}</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Phone className="w-3.5 h-3.5 text-amber-400" />
-                <span className="font-mono text-white font-semibold">BJ: {COMPANY_INFO.phone2}</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Mail className="w-3.5 h-3.5 text-amber-400" />
-                <span className="font-mono text-slate-300">{COMPANY_INFO.email}</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <MapPin className="w-3.5 h-3.5 text-amber-400" />
+            <div className="pt-2 text-xs space-y-2.5 text-slate-300">
+              <a 
+                href={`tel:${COMPANY_INFO.phone.replace(/\s+/g, '')}`}
+                className="flex items-center gap-2 hover:text-amber-400 transition-colors group cursor-pointer"
+                title="Call Nigeria Commercial Desk"
+              >
+                <Phone className="w-3.5 h-3.5 text-amber-400 shrink-0 group-hover:scale-110 transition-transform" />
+                <span className="font-mono text-white font-semibold group-hover:text-amber-400">NG: {COMPANY_INFO.phone}</span>
+              </a>
+              <a 
+                href={`tel:${COMPANY_INFO.phone2.replace(/\s+/g, '')}`}
+                className="flex items-center gap-2 hover:text-amber-400 transition-colors group cursor-pointer"
+                title="Call Benin Operations Desk"
+              >
+                <Phone className="w-3.5 h-3.5 text-amber-400 shrink-0 group-hover:scale-110 transition-transform" />
+                <span className="font-mono text-white font-semibold group-hover:text-amber-400">BJ: {COMPANY_INFO.phone2}</span>
+              </a>
+              <a 
+                href={`mailto:${COMPANY_INFO.email}`}
+                className="flex items-center gap-2 hover:text-amber-400 transition-colors group cursor-pointer"
+                title="Send an email to Veliora Links"
+              >
+                <Mail className="w-3.5 h-3.5 text-amber-400 shrink-0 group-hover:scale-110 transition-transform" />
+                <span className="font-mono text-slate-300 group-hover:text-amber-400">{COMPANY_INFO.email}</span>
+              </a>
+              <div className="flex items-center gap-2 text-slate-400">
+                <MapPin className="w-3.5 h-3.5 text-amber-400 shrink-0" />
                 <span>{COMPANY_INFO.address}</span>
               </div>
             </div>
@@ -169,24 +181,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onRequestQuote }) =>
         </div>
 
         {/* Bottom Bar: Copyright, ZIP Download & Back to Top */}
-        <div className="pt-12 mt-12 border-t border-blue-900/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-400">
-          <div>
-            © {new Date().getFullYear()} Veliora Links. All rights reserved. Operating in the oil, gas, and diesel sectors in Africa.
-          </div>
-          <div className="flex items-center gap-4 sm:gap-6 flex-wrap">
-          
-            <button onClick={() => handleLink('compliance')} className="hover:text-white cursor-pointer">
-              Strict KYC & Banking Compliance Enforced
-            </button>
-            <button
-              onClick={scrollToTop}
-              className="flex items-center gap-1 text-slate-300 hover:text-white transition-colors cursor-pointer"
-            >
-              <span>Back to Top</span>
-              <ArrowUp className="w-3.5 h-3.5" />
-            </button>
-          </div>
-        </div>
+       
 
       </div>
     </footer>
