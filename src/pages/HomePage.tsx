@@ -57,7 +57,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onRequestQuote }
                   onClick={() => onNavigate('trading')}
                   className="text-xs text-blue-950 hover:text-amber-600 font-bold flex items-center gap-1 cursor-pointer transition-colors"
                 >
-                  <span>E</span>
+                  <span>Explore Energy Products →</span>
                 </button>
               </div>
             </div>
